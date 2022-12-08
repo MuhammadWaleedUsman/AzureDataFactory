@@ -1,0 +1,9 @@
+{
+	"name": "SocialStreamAnalyticsFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3b21ada5-8531-4e24-9394-4c0f6b20c430",
+		"tenantId": "491b7f07-e50e-476a-9cb1-6926813fc342"
+	}
+}
