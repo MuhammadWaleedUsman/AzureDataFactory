@@ -60,10 +60,29 @@
 							},
 							{
 								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "post_uuid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['time']"
+								},
+								"sink": {
+									"name": "post_timestamp",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
 									"path": "$['impressions']"
 								},
 								"sink": {
-									"name": "post_impressions"
+									"name": "post_impressions",
+									"type": "Int32"
 								}
 							},
 							{
@@ -116,7 +135,8 @@
 									"path": "$['click']"
 								},
 								"sink": {
-									"name": "post_clicks"
+									"name": "post_clicks",
+									"type": "Int32"
 								}
 							},
 							{
@@ -214,10 +234,21 @@
 									"path": "$['media engagements']"
 								},
 								"sink": {
-									"name": "post_media_engagements"
+									"name": "post_media_engagements",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventProcessedUtcTime']"
+								},
+								"sink": {
+									"name": "post_stream_datetime",
+									"type": "DateTime"
 								}
 							}
-						]
+						],
+						"mapComplexValuesToString": false
 					}
 				},
 				"inputs": [
