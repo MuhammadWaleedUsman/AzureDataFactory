@@ -214,8 +214,7 @@
 									"path": "$['media engagements']"
 								},
 								"sink": {
-									"name": "post_engagements",
-									"type": "Int32"
+									"name": "post_media_engagements"
 								}
 							}
 						]
