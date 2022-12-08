@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "streamblobcontainer//0_811eee6a178b4650bdd7b113bf090320_1.json"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.post_table"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
@@ -220,14 +229,6 @@
 								"sink": {
 									"name": "post_engagements",
 									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"path": "$['EventProcessedUtcTime']"
-								},
-								"sink": {
-									"name": "post_stream_datetime"
 								}
 							}
 						]
