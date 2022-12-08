@@ -39,8 +39,11 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
+						"writeBatchSize": 1,
+						"maxConcurrentConnections": 1,
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
