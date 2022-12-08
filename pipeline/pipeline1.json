@@ -237,15 +237,6 @@
 									"name": "post_stream_datetime",
 									"type": "DateTime"
 								}
-							},
-							{
-								"source": {
-									"path": "$['id']"
-								},
-								"sink": {
-									"name": "post_uuid",
-									"type": "Int32"
-								}
 							}
 						],
 						"mapComplexValuesToString": false
