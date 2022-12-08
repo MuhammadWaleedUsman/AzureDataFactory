@@ -1,0 +1,95 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "0_811eee6a178b4650bdd7b113bf090320_1.json",
+				"container": "streamblobcontainer"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"tweet": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"time": {
+					"type": "string"
+				},
+				"impressions": {
+					"type": "number"
+				},
+				"engagements": {
+					"type": "number"
+				},
+				"engagement rate": {
+					"type": "number"
+				},
+				"retweets": {
+					"type": "number"
+				},
+				"replies": {
+					"type": "integer"
+				},
+				"likes": {
+					"type": "number"
+				},
+				"click": {
+					"type": "number"
+				},
+				"url_click": {
+					"type": "integer"
+				},
+				"hashtag_clicks": {
+					"type": "integer"
+				},
+				"detail_expands": {
+					"type": "integer"
+				},
+				"permalink clicks": {
+					"type": "integer"
+				},
+				"app opens": {
+					"type": "integer"
+				},
+				"app_installs": {
+					"type": "integer"
+				},
+				"follows": {
+					"type": "integer"
+				},
+				"email_tweet": {
+					"type": "integer"
+				},
+				"dial_phone": {
+					"type": "integer"
+				},
+				"media views": {
+					"type": "number"
+				},
+				"media engagements": {
+					"type": "number"
+				},
+				"EventProcessedUtcTime": {
+					"type": "string"
+				},
+				"PartitionId": {
+					"type": "integer"
+				},
+				"EventEnqueuedUtcTime": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

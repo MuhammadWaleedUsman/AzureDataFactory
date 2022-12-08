@@ -1,0 +1,252 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Load Data To SQL Server",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['tweet']"
+								},
+								"sink": {
+									"name": "post_content",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "post_uuid",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['time']"
+								},
+								"sink": {
+									"name": "post_timestamp",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "$['impressions']"
+								},
+								"sink": {
+									"name": "post_impressions"
+								}
+							},
+							{
+								"source": {
+									"path": "$['engagements']"
+								},
+								"sink": {
+									"name": "post_engagements",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['engagement rate']"
+								},
+								"sink": {
+									"name": "post_engagement_rate",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['retweets']"
+								},
+								"sink": {
+									"name": "post_shares",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['replies']"
+								},
+								"sink": {
+									"name": "post_replies",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['likes']"
+								},
+								"sink": {
+									"name": "post_likes",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['click']"
+								},
+								"sink": {
+									"name": "post_clicks"
+								}
+							},
+							{
+								"source": {
+									"path": "$['url_click']"
+								},
+								"sink": {
+									"name": "post_url_clicks",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['hashtag_clicks']"
+								},
+								"sink": {
+									"name": "post_hashtag_clicks",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['detail_expands']"
+								},
+								"sink": {
+									"name": "post_detail_expands",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['permalink clicks']"
+								},
+								"sink": {
+									"name": "post_permalink_clicks",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['app opens']"
+								},
+								"sink": {
+									"name": "post_app_opens",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['app_installs']"
+								},
+								"sink": {
+									"name": "post_app_installs",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['follows']"
+								},
+								"sink": {
+									"name": "post_follows",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['email_tweet']"
+								},
+								"sink": {
+									"name": "post_email",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['dial_phone']"
+								},
+								"sink": {
+									"name": "post_dial_phone",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media views']"
+								},
+								"sink": {
+									"name": "post_media_views",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media engagements']"
+								},
+								"sink": {
+									"name": "post_engagements",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EventProcessedUtcTime']"
+								},
+								"sink": {
+									"name": "post_stream_datetime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

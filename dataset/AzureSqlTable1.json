@@ -1,0 +1,122 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "post_content",
+				"type": "text"
+			},
+			{
+				"name": "post_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "post_engagements",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_engagement_rate",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "post_shares",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_replies",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_likes",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_profile_clicks",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_url_clicks",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_hashtag_clicks",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_detail_expands",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_permalink_clicks",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_app_opens",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_app_installs",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_follows",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_email",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_dial_phone",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_media_views",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_media_engagements",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "post_uuid",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "post_table"
+		}
+	}
+}
