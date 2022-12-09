@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "0_811eee6a178b4650bdd7b113bf090320_1.json",
 				"container": "streamblobcontainer"
 			}
 		},
